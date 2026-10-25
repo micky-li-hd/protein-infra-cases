@@ -67,3 +67,7 @@ Protenix 尚无验收通过的加速结果；OpenFold 的探索性测速未通�
 ## 致谢
 
 原始项目：[ProteinMPNN](https://github.com/dauparas/ProteinMPNN)、[RFdiffusion](https://github.com/RosettaCommons/RFdiffusion)。方法参考 ResearchBoost-Agent。上游代码及衍生补丁受各自许可证约束；本文不代表上游项目或 ResearchBoost 官方认证。
+
+## 独立训练运行包
+
+已补充[完整训练代码与运行入口](TRAINING_RUNTIME.md)，包含锁定的原版与候选代码、依赖、官方完整数据训练配置、共享 GPU 锁和进程所有权清理。新入口目前通过 CPU 检查，尚待空闲 GPU 做启动验证及后续完整训练；这不是新增加速或收敛结果。
