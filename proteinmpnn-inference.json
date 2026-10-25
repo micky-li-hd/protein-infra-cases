@@ -1,0 +1,15 @@
+{
+  "status": "DEVELOPMENT_BENEFIT_PASS",
+  "selected_candidate": "candidate_002",
+  "source_sha256": "5f132c7b8420baf017514b94aa2fca65bd81ab2df523c90508c93122325b9687",
+  "generation_speedup_median": 1.1924153115754226,
+  "process_wall_speedup_median": 1.1578976598563966,
+  "reference_spread": 0.0329005164840469,
+  "minimum_required_speedup": 1.0658010329680938,
+  "complete_workload": "Original official 5L33 chain A, 106 residues, 32 sequences, batch1, seed37, temperature0.1, original precision",
+  "bitwise_outputs_and_final_rng_pass": true,
+  "extra_seed91_batch2_and_missing_masks_pass": true,
+  "evidence_tar_sha256": "1fd1c9a23b457e8b53b08fc4a90b72241dd721fff8d8d79572843b799d9dcde7",
+  "formal_researchboost_certification": false,
+  "scope_limit": "This fixed monomer inference workload only; no general size/batch/quality/training speedup claim"
+}

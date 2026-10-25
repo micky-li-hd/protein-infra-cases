@@ -1,0 +1,43 @@
+{
+  "scope": "Independent read-only review of all nine original-source timing processes and three 128-update numerical pairings",
+  "result": "No actionable blocker for scoped steady-state development claim",
+  "speedup": 2.1265046090180015,
+  "reference_ms": 99.58653257243218,
+  "candidate_ms": 46.831091806765585,
+  "group_speedups": [
+    2.13706267589189,
+    2.075593987601855,
+    2.1688899265886716
+  ],
+  "reference_spread": 0.08239154341057732,
+  "max_internal_spread": 0.0946963,
+  "source_bound": true,
+  "same_exposure_all_nine": true,
+  "clean_resources": true,
+  "numerics": "3 x 128 updates, seven frozen endpoints; original S2 equivalent and LR x 1.02 different; 272-file reference binding preserved",
+  "costs": {
+    "fresh_process_seconds": {
+      "R": 27.17,
+      "C": 192.96
+    },
+    "first_40_training_updates_seconds": {
+      "R": 4.56,
+      "C": 134.69
+    },
+    "peak_allocated_gib": {
+      "R": 3.208,
+      "C": 4.16
+    },
+    "peak_reserved_gib": {
+      "R": 6.639,
+      "C": 6.469
+    }
+  },
+  "limitations": [
+    "Short 160-update process is 7.10x slower including cold compilation",
+    "Peak allocated memory increases 29.7%",
+    "Inductor cache empty, global Triton cache retained",
+    "N1 eligibility only; n1_pass=false and four_gate_certified=false",
+    "No convergence, end-to-end, other workload or other project claim"
+  ]
+}

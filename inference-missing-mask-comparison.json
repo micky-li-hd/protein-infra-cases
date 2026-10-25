@@ -1,0 +1,90 @@
+{
+  "reference": "reference_missing",
+  "results": [
+    {
+      "target": "candidate_missing",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            4,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            4,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            4,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            2,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            2,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            4
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            4
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "caaa5f84a60219faf67ab512148cef857fdfc9d1444e4a6bd6b39b39a7f0cf84",
+        "scores/5L33.npz": "c60052808375955c488e2ca730718fb5720db3ef252ab2dfa50ad7e23da58700",
+        "seqs/5L33.fa": "9e3a346ec333c163d7380dd4556bb3d55115d8135d09b223e3e86d87db6fa759"
+      }
+    }
+  ]
+}

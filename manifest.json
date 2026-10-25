@@ -1,0 +1,22 @@
+{
+  "ProteinMPNN.txt": "82009d25ce585631f452b2b24589bdb29c559ccfefa2f200ef312ed5b501a586",
+  "README.md": "6975f878b8c7cece71ec72669d32c25c8eb3d335c90035f70f313a50c5955f2b",
+  "RFdiffusion.txt": "eefc2ae77cb92b1414a6ac76b246642fae2189747b1b07747e92e5ddc696ec24",
+  "THIRD_PARTY_NOTICES.md": "63d82d2dd2f22a1e1ebe8d052ce487c6d17662dbfc9bbc608ac7b3b04798d921",
+  "apply_case.py": "fcd12c678c80e36c0efa6109c72e70a55ead846d7a72c1d73be1f4d731b7c372",
+  "inference-batch2-comparison.json": "da18a9b630f1b1402ad538765de3257e150bf5dc1e9e0e75b56c5e7389beddf6",
+  "inference-exact-comparison.json": "128e52578c448fa29ee1f981d7b69a2d15d771382450f8e89790fd13a43f915d",
+  "inference-missing-mask-comparison.json": "dce14cb0b6611b5df5afbbb6e5993ebdfa4182463eaea8ad174840562bbf5ae8",
+  "inference-timing.json": "922a50a99047f2a1e8946231c4116bc30c6734961c1e963979fc6490a0a5f3d7",
+  "proteinmpnn-inference.json": "6a2173123cc317f1af3daa6c1b002cbf4713e3cb5aefa7f153ffa60dedfe4a8f",
+  "proteinmpnn-inference.patch": "1842e896919b996e04d6ef3551aef6109314bce617fa7e2506479edbe8156354",
+  "proteinmpnn-training.json": "f256c042847abcca9dfea83766c10cb40f5a7241bbb924a7bfaa971d0a277dea",
+  "proteinmpnn-training.patch": "c7824c71d01643bbf1ebf21892e26271533bcac25edb119d33542d6cde75f1ba",
+  "reproduction.md": "f3ac74af2e3cc2cc0d7e2fd03b34dfbbe768d4ee56802eddc73985b47d363261",
+  "rfdiffusion-inference.json": "b7c6c135558155bbe8f9dbf38542ad5f53edf21220c0ebed9c8eae2d6d50e33d",
+  "rfdiffusion-inference.patch": "02ab25d63b609a01dd9e8d7ad302ff2d27648022a420216bac3526a0c6068ad2",
+  "training-numerical-endpoints.json": "9c253182d9d96778b561efed19a0df349505b9419a46fd1bf8f655b37332f9cc",
+  "training-timing-group1.json": "fa0bd7b8c5410d590e7b1a30f9f23ce9ddc1a3ffe3591b37c2ea99c943395f5a",
+  "training-timing-group2.json": "df5d194d6bb4b51c09dde276edce1c5d689ef82f000a7f7594e6b7d665c764a8",
+  "training-timing-group3.json": "0c4247621d19c70da99b57ea3d9692c71bf99f1168b17eb1b736df139aac7a0e"
+}

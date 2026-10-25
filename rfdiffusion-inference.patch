@@ -1,0 +1,11 @@
+--- a/rfdiffusion/inference/model_runners.py
++++ b/rfdiffusion/inference/model_runners.py
+@@ -841,7 +841,7 @@
+         ####################
+         ### Forward Pass ###
+         ####################
+-        with torch.no_grad():
++        with torch.inference_mode():
+             msa_prev, pair_prev, px0, state_prev, alpha, logits, plddt = self.model(
+                 msa_masked,
+                 msa_full,

@@ -1,0 +1,71 @@
+diff --git a/protein_mpnn_utils.py b/protein_mpnn_utils.py
+index a8fd008..0490500 100644
+--- a/protein_mpnn_utils.py
++++ b/protein_mpnn_utils.py
+@@ -1140,49 +1140,51 @@ class ProteinMPNN(nn.Module):
+         h_EX_encoder = cat_neighbors_nodes(torch.zeros_like(h_S), h_E, E_idx)
+         h_EXV_encoder = cat_neighbors_nodes(h_V, h_EX_encoder, E_idx)
+         h_EXV_encoder_fw = mask_fw * h_EXV_encoder
++        # The padding condition is constant for a sampled decoding order.
++        missing_in_decoding_order = (torch.gather(mask, 1, decoding_order) == 0).all(dim=0).tolist()
+         for t_ in range(N_nodes):
+             t = decoding_order[:,t_] #[B]
+             chain_mask_gathered = torch.gather(chain_mask, 1, t[:,None]) #[B]
+-            mask_gathered = torch.gather(mask, 1, t[:,None]) #[B]
+-            bias_by_res_gathered = torch.gather(bias_by_res, 1, t[:,None,None].repeat(1,1,21))[:,0,:] #[B, 21]
+-            if (mask_gathered==0).all(): #for padded or missing regions only
++            bias_by_res_gathered = torch.gather(bias_by_res, 1, t[:,None,None].expand(-1,1,21))[:,0,:] #[B, 21]
++            if missing_in_decoding_order[t_]: #for padded or missing regions only
+                 S_t = torch.gather(S_true, 1, t[:,None])
+             else:
+                 # Hidden layers
+-                E_idx_t = torch.gather(E_idx, 1, t[:,None,None].repeat(1,1,E_idx.shape[-1]))
+-                h_E_t = torch.gather(h_E, 1, t[:,None,None,None].repeat(1,1,h_E.shape[-2], h_E.shape[-1]))
++                E_idx_t = torch.gather(E_idx, 1, t[:,None,None].expand(-1,1,E_idx.shape[-1]))
++                h_E_t = torch.gather(h_E, 1, t[:,None,None,None].expand(-1,1,h_E.shape[-2], h_E.shape[-1]))
+                 h_ES_t = cat_neighbors_nodes(h_S, h_E_t, E_idx_t)
+-                h_EXV_encoder_t = torch.gather(h_EXV_encoder_fw, 1, t[:,None,None,None].repeat(1,1,h_EXV_encoder_fw.shape[-2], h_EXV_encoder_fw.shape[-1]))
++                h_EXV_encoder_t = torch.gather(h_EXV_encoder_fw, 1, t[:,None,None,None].expand(-1,1,h_EXV_encoder_fw.shape[-2], h_EXV_encoder_fw.shape[-1]))
+                 mask_t = torch.gather(mask, 1, t[:,None])
++                mask_bw_t = torch.gather(mask_bw, 1, t[:,None,None,None].expand(-1,1,mask_bw.shape[-2], mask_bw.shape[-1]))
+                 for l, layer in enumerate(self.decoder_layers):
+                     # Updated relational features for future states
+                     h_ESV_decoder_t = cat_neighbors_nodes(h_V_stack[l], h_ES_t, E_idx_t)
+-                    h_V_t = torch.gather(h_V_stack[l], 1, t[:,None,None].repeat(1,1,h_V_stack[l].shape[-1]))
+-                    h_ESV_t = torch.gather(mask_bw, 1, t[:,None,None,None].repeat(1,1,mask_bw.shape[-2], mask_bw.shape[-1])) * h_ESV_decoder_t + h_EXV_encoder_t
+-                    h_V_stack[l+1].scatter_(1, t[:,None,None].repeat(1,1,h_V.shape[-1]), layer(h_V_t, h_ESV_t, mask_V=mask_t))
++                    h_V_t = torch.gather(h_V_stack[l], 1, t[:,None,None].expand(-1,1,h_V_stack[l].shape[-1]))
++                    h_ESV_t = mask_bw_t * h_ESV_decoder_t + h_EXV_encoder_t
++                    h_V_stack[l+1].scatter_(1, t[:,None,None].expand(-1,1,h_V.shape[-1]), layer(h_V_t, h_ESV_t, mask_V=mask_t))
+                 # Sampling step
+-                h_V_t = torch.gather(h_V_stack[-1], 1, t[:,None,None].repeat(1,1,h_V_stack[-1].shape[-1]))[:,0]
++                h_V_t = torch.gather(h_V_stack[-1], 1, t[:,None,None].expand(-1,1,h_V_stack[-1].shape[-1]))[:,0]
+                 logits = self.W_out(h_V_t) / temperature
+                 probs = F.softmax(logits-constant[None,:]*1e8+constant_bias[None,:]/temperature+bias_by_res_gathered/temperature, dim=-1)
+                 if pssm_bias_flag:
+                     pssm_coef_gathered = torch.gather(pssm_coef, 1, t[:,None])[:,0]
+-                    pssm_bias_gathered = torch.gather(pssm_bias, 1, t[:,None,None].repeat(1,1,pssm_bias.shape[-1]))[:,0]
++                    pssm_bias_gathered = torch.gather(pssm_bias, 1, t[:,None,None].expand(-1,1,pssm_bias.shape[-1]))[:,0]
+                     probs = (1-pssm_multi*pssm_coef_gathered[:,None])*probs + pssm_multi*pssm_coef_gathered[:,None]*pssm_bias_gathered
+                 if pssm_log_odds_flag:
+-                    pssm_log_odds_mask_gathered = torch.gather(pssm_log_odds_mask, 1, t[:,None, None].repeat(1,1,pssm_log_odds_mask.shape[-1]))[:,0] #[B, 21]
++                    pssm_log_odds_mask_gathered = torch.gather(pssm_log_odds_mask, 1, t[:,None, None].expand(-1,1,pssm_log_odds_mask.shape[-1]))[:,0] #[B, 21]
+                     probs_masked = probs*pssm_log_odds_mask_gathered
+                     probs_masked += probs * 0.001
+                     probs = probs_masked/torch.sum(probs_masked, dim=-1, keepdim=True) #[B, 21]
+                 if omit_AA_mask_flag:
+-                    omit_AA_mask_gathered = torch.gather(omit_AA_mask, 1, t[:,None, None].repeat(1,1,omit_AA_mask.shape[-1]))[:,0] #[B, 21]
++                    omit_AA_mask_gathered = torch.gather(omit_AA_mask, 1, t[:,None, None].expand(-1,1,omit_AA_mask.shape[-1]))[:,0] #[B, 21]
+                     probs_masked = probs*(1.0-omit_AA_mask_gathered)
+                     probs = probs_masked/torch.sum(probs_masked, dim=-1, keepdim=True) #[B, 21]
+                 S_t = torch.multinomial(probs, 1)
+-                all_probs.scatter_(1, t[:,None,None].repeat(1,1,21), (chain_mask_gathered[:,:,None,]*probs[:,None,:]).float())
++                all_probs.scatter_(1, t[:,None,None].expand(-1,1,21), (chain_mask_gathered[:,:,None,]*probs[:,None,:]).float())
+             S_true_gathered = torch.gather(S_true, 1, t[:,None])
+             S_t = (S_t*chain_mask_gathered+S_true_gathered*(1.0-chain_mask_gathered)).long()
+             temp1 = self.W_s(S_t)
+-            h_S.scatter_(1, t[:,None,None].repeat(1,1,temp1.shape[-1]), temp1)
++            h_S.scatter_(1, t[:,None,None].expand(-1,1,temp1.shape[-1]), temp1)
+             S.scatter_(1, t[:,None], S_t)
+         output_dict = {"S": S, "probs": all_probs, "decoding_order": decoding_order}
+         return output_dict

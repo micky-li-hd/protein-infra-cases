@@ -1,0 +1,114 @@
+{
+  "scope": "One default-mode R-C-R process group, three windows per process; not three independent R-C-R groups",
+  "correctness_qualification": "Dynamic candidate fixed-data128 validation is separate; no full certification",
+  "primary": "Complete native training loop body including featurize and native metrics; no added synchronization",
+  "runs": {
+    "R1": {
+      "step_count": 160,
+      "warmup_excluded": 40,
+      "measured_steps": 105,
+      "trailing_steps_excluded": 15,
+      "window_ms_per_step": [
+        100.08636468223163,
+        97.0973935510431,
+        103.02451008132526
+      ],
+      "mean_ms_per_step": 100.06942277153333,
+      "featurize_mean_ms": 10.253825482158433,
+      "cuda_compute_aux_mean_ms": 88.98074718656994,
+      "peak_allocated_bytes": 3444315136,
+      "peak_reserved_bytes": 7128219648,
+      "peak_memory_scope": "Reset once before model/checkpoint load; cumulative whole entry through final validation/checkpoint",
+      "process_wall_seconds": 26.916581451892853,
+      "entry_wall_seconds": 23.660826832056046,
+      "startup_to_first_step_s": 2.9255271032452583,
+      "returncode": 0,
+      "compile_changed_steps": [],
+      "measured_compile_counters_stable": true,
+      "warmup_total_seconds": 4.4695543590933084,
+      "entire_loop_seconds": 16.449423579499125
+    },
+    "C": {
+      "step_count": 160,
+      "warmup_excluded": 40,
+      "measured_steps": 105,
+      "trailing_steps_excluded": 15,
+      "window_ms_per_step": [
+        47.408079728484154,
+        43.935998369540485,
+        48.34535664745739
+      ],
+      "mean_ms_per_step": 46.56314491516068,
+      "featurize_mean_ms": 13.63130554202057,
+      "cuda_compute_aux_mean_ms": 32.12062272571382,
+      "peak_allocated_bytes": 4466786304,
+      "peak_reserved_bytes": 6945767424,
+      "peak_memory_scope": "Reset once before model/checkpoint load; cumulative whole entry through final validation/checkpoint",
+      "process_wall_seconds": 195.5486381277442,
+      "entry_wall_seconds": 187.21467662230134,
+      "startup_to_first_step_s": 2.9419056735932827,
+      "returncode": 0,
+      "compile_changed_steps": [
+        0,
+        20
+      ],
+      "measured_compile_counters_stable": true,
+      "positive_compile_counters": {
+        "dynamo": {
+          "inductor": {
+            "fxgraph_cache_miss": 5,
+            "extern_calls": 417,
+            "benchmarking.TritonBenchmarker.benchmark_gpu": 502,
+            "benchmarking.TritonBenchmarker.triton_do_bench": 1
+          },
+          "inline_call": {},
+          "stats": {
+            "calls_captured": 2625,
+            "unique_graphs": 3
+          },
+          "aot_autograd": {
+            "total": 3,
+            "ok": 3
+          }
+        },
+        "inductor_generated_kernel_count": 883
+      },
+      "warmup_total_seconds": 135.08852035179734,
+      "entire_loop_seconds": 140.6605780031532
+    },
+    "R2": {
+      "step_count": 160,
+      "warmup_excluded": 40,
+      "measured_steps": 105,
+      "trailing_steps_excluded": 15,
+      "window_ms_per_step": [
+        97.77141447578158,
+        95.43269175503936,
+        103.63777987658978
+      ],
+      "mean_ms_per_step": 98.94729536913691,
+      "featurize_mean_ms": 9.522258969289917,
+      "cuda_compute_aux_mean_ms": 88.55046223231724,
+      "peak_allocated_bytes": 3444315136,
+      "peak_reserved_bytes": 7128219648,
+      "peak_memory_scope": "Reset once before model/checkpoint load; cumulative whole entry through final validation/checkpoint",
+      "process_wall_seconds": 27.324466168880463,
+      "entry_wall_seconds": 23.95277501642704,
+      "startup_to_first_step_s": 3.2717364635318518,
+      "returncode": 0,
+      "compile_changed_steps": [],
+      "measured_compile_counters_stable": true,
+      "warmup_total_seconds": 4.412373669445515,
+      "entire_loop_seconds": 16.313742123544216
+    }
+  },
+  "timing_exposure_metadata_equal": true,
+  "reference_spread": 0.08245626998783938,
+  "speedup": 2.13706267589189,
+  "required_speedup": 1.1649125399756788,
+  "benefit_gate_pass_only": true,
+  "default_numerics_qualified": false,
+  "certified": false,
+  "e2e_speedup_descriptive_only": 0.138689402647079,
+  "benefit_classification": "development benefit rule passed; numerics qualification remains separate"
+}

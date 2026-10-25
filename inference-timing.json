@@ -1,0 +1,83 @@
+{
+  "scope": "Development fixed-workload inference benchmark; not ResearchBoost certification",
+  "status": "DEVELOPMENT_BENEFIT_PASS",
+  "exact_outputs_and_rng": true,
+  "reference_spread": 0.0329005164840469,
+  "required_speedup": 1.0658010329680938,
+  "median_generation_speedup": 1.1924153115754226,
+  "median_process_wall_speedup": 1.1578976598563966,
+  "blocks": [
+    {
+      "block": 0,
+      "before_seconds": 10.5685,
+      "candidate_seconds": 8.7202,
+      "after_seconds": 10.2277,
+      "generation_speedup": 1.1924153115754226,
+      "process_wall_speedup": 1.1578976598563966
+    },
+    {
+      "block": 1,
+      "before_seconds": 10.3259,
+      "candidate_seconds": 8.4417,
+      "after_seconds": 10.316,
+      "generation_speedup": 1.2226151130696423,
+      "process_wall_speedup": 1.1758094093225042
+    },
+    {
+      "block": 2,
+      "before_seconds": 10.496,
+      "candidate_seconds": 8.8134,
+      "after_seconds": 10.3911,
+      "generation_speedup": 1.1849626704790432,
+      "process_wall_speedup": 1.1184941367659778
+    }
+  ],
+  "raw_times": [
+    {
+      "label": "reference_before_0",
+      "generation_seconds": 10.5685,
+      "wall_seconds": 13.839387903921306
+    },
+    {
+      "label": "candidate_0",
+      "generation_seconds": 8.7202,
+      "wall_seconds": 11.77915142569691
+    },
+    {
+      "label": "reference_after_0",
+      "generation_seconds": 10.2277,
+      "wall_seconds": 13.43871583789587
+    },
+    {
+      "label": "reference_before_1",
+      "generation_seconds": 10.3259,
+      "wall_seconds": 13.660011325031519
+    },
+    {
+      "label": "candidate_1",
+      "generation_seconds": 8.4417,
+      "wall_seconds": 11.525596334598958
+    },
+    {
+      "label": "reference_after_1",
+      "generation_seconds": 10.316,
+      "wall_seconds": 13.443797911517322
+    },
+    {
+      "label": "reference_before_2",
+      "generation_seconds": 10.496,
+      "wall_seconds": 13.783295930363238
+    },
+    {
+      "label": "candidate_2",
+      "generation_seconds": 8.8134,
+      "wall_seconds": 12.15407775901258
+    },
+    {
+      "label": "reference_after_2",
+      "generation_seconds": 10.3911,
+      "wall_seconds": 13.405233492143452
+    }
+  ],
+  "acceptance_sha256": "2b797df2f36dca182e5aa44bc50c625af1c4aa92a44f8c27118464713de39c57"
+}

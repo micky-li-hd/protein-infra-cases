@@ -1,0 +1,685 @@
+{
+  "reference": "reference_before_0",
+  "results": [
+    {
+      "target": "candidate_0",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    },
+    {
+      "target": "reference_after_0",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    },
+    {
+      "target": "reference_before_1",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    },
+    {
+      "target": "candidate_1",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    },
+    {
+      "target": "reference_after_1",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    },
+    {
+      "target": "reference_before_2",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    },
+    {
+      "target": "candidate_2",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    },
+    {
+      "target": "reference_after_2",
+      "status": "EXACT_ALL_OUTPUTS_AND_FINAL_RNG",
+      "checks": [
+        {
+          "file": "probs/5L33.npz",
+          "key": "probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "log_probs",
+          "shape": [
+            32,
+            106,
+            21
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "S",
+          "shape": [
+            32,
+            106
+          ],
+          "dtype": "int32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "mask",
+          "shape": [
+            1,
+            106
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "probs/5L33.npz",
+          "key": "chain_order",
+          "shape": [
+            1,
+            1
+          ],
+          "dtype": "<U1",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "scores/5L33.npz",
+          "key": "global_score",
+          "shape": [
+            32
+          ],
+          "dtype": "float32",
+          "equal": true
+        },
+        {
+          "file": "seqs/5L33.fa",
+          "equal": true
+        }
+      ],
+      "output_sha256": {
+        "probs/5L33.npz": "91d752dd88a04c563e7855afc931c53d4f45bb05c37918814bb327c8aeb8286e",
+        "scores/5L33.npz": "aefb3c1728203cad38d9419f6e85926ff788843f6ff994a1fb687eeccab9ec93",
+        "seqs/5L33.fa": "ff01359941c7b5d3daec35822eef982e61fba30c3a8db63f1cee8819c928bb6e"
+      }
+    }
+  ]
+}
