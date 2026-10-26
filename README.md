@@ -71,3 +71,7 @@ Protenix 尚无验收通过的加速结果；OpenFold 的探索性测速未通�
 ## 独立训练运行包
 
 已补充[完整训练代码与运行入口](TRAINING_RUNTIME.md)，包含锁定的原版与候选代码、依赖、官方完整数据训练配置、共享 GPU 锁和进程所有权清理。新入口目前通过 CPU 检查，尚待空闲 GPU 做启动验证及后续完整训练；这不是新增加速或收敛结果。
+
+### Training launcher fix (2026-10-26)
+
+The runtime archive now fixes multiprocessing callback pickling and passes both GPU startup arms. Five updates per arm and checkpoint finiteness are verified; this does not establish long-training equivalence or a new speedup. See [runtime status](TRAINING_RUNTIME.md).

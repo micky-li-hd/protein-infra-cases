@@ -10,6 +10,6 @@ python3.12 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
-**Prepared, not GPU-validated:** the new launcher passed source identity, syntax, data-layout and rejected-override checks. No new GPU run, full-data convergence or four-gate certification is claimed. Follow the package README for the remaining validation steps. The complete-data recipe is larger than the earlier benchmark and may OOM; do not silently shrink it and report the result as the original workload.
+**GPU startup validated (2026-10-26):** fixed a multiprocessing pickling error in the launcher by keeping worker callbacks in an importable module. Both original and candidate completed the same one-epoch startup fixture (64-example loading cap, five updates), with 472 finite checkpoint tensors each and clean owned-process cleanup. Process times were 37.46 s and 143.01 s respectively; cold compilation makes this small run slower. This is not a speedup result, numerical-equivalence verdict or full-training certification.
 
-Both assigned two-GPU hosts were occupied when this package was prepared, so no competing GPU job was started.
+The archive includes GPU_STARTUP_CHECKS.json. Model and native training sources are unchanged by this fix. A separate six-epoch real-configuration reference/candidate/reference comparison is in progress; no results are claimed yet.
